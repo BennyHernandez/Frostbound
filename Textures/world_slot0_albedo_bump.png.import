@@ -2,8 +2,8 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bq6tscmynr6da"
-path.s3tc="res://.godot/imported/snow01.png-e6994e4f26b5df6d0f18cb0f687b0f4b.s3tc.ctex"
+uid="uid://uek0331d3rcl"
+path.s3tc="res://.godot/imported/world_slot0_albedo_bump.png-dbc03538e94acab18e7e1be73de31248.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://snow01.png"
-dest_files=["res://.godot/imported/snow01.png-e6994e4f26b5df6d0f18cb0f687b0f4b.s3tc.ctex"]
+source_file="res://Textures/world_slot0_albedo_bump.png"
+dest_files=["res://.godot/imported/world_slot0_albedo_bump.png-dbc03538e94acab18e7e1be73de31248.s3tc.ctex"]
 
 [params]
 
@@ -24,9 +24,9 @@ compress/normal_map=0
 compress/channel_pack=0
 mipmaps/generate=true
 mipmaps/limit=-1
-roughness/mode=0
+roughness/mode=1
 roughness/src_normal=""
-process/fix_alpha_border=true
+process/fix_alpha_border=false
 process/premult_alpha=false
 process/normal_map_invert_y=false
 process/hdr_as_srgb=false
