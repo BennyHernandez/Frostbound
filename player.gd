@@ -2,7 +2,7 @@ extends CharacterBody3D
 # https://github.com/rbarongr/GodotFirstPersonController/tree/main
 
 @export_category("Player")
-@export_range(1, 35, 1) var speed: float = 10 # m/s
+@export_range(1, 100, 1) var speed: float = 10 # m/s
 @export_range(10, 400, 1) var acceleration: float = 100 # m/s^2
 
 @export_range(0.1, 3.0, 0.1) var jump_height: float = 1 # m
