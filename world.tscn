@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://cak57l4ubyvdq"]
+[gd_scene load_steps=14 format=3 uid="uid://cak57l4ubyvdq"]
 
 [ext_resource type="Script" path="res://addons/zylann.hterrain/hterrain.gd" id="1_1ehf7"]
 [ext_resource type="Script" path="res://TerrainGen.gd" id="1_hmgv8"]
@@ -6,6 +6,7 @@
 [ext_resource type="Script" path="res://addons/zylann.hterrain/hterrain_texture_set.gd" id="3_o62vq"]
 [ext_resource type="Texture2D" uid="uid://du5hg5sjpecym" path="res://Textures/world_slot0_albedo_bump.png" id="4_ml4hd"]
 [ext_resource type="Texture2D" uid="uid://dsnw0li0fstoj" path="res://Textures/world_slot0_normal_roughness.png" id="5_7bkb5"]
+[ext_resource type="Shader" uid="uid://dlfqk0bxae4l4" path="res://water.tres" id="7_knosd"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_j7eus"]
 
@@ -22,6 +23,18 @@ script = ExtResource("3_o62vq")
 mode = 0
 textures = [[ExtResource("4_ml4hd")], [ExtResource("5_7bkb5")]]
 
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_slt0t"]
+render_priority = 0
+shader = ExtResource("7_knosd")
+shader_parameter/ColorParameter = Color(0.266667, 0.513726, 0.760784, 1)
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_ghp7s"]
+lightmap_size_hint = Vector2i(15002, 15002)
+material = SubResource("ShaderMaterial_slt0t")
+size = Vector2(3000, 3000)
+subdivide_width = 20
+subdivide_depth = 20
+
 [node name="World" type="Node3D"]
 script = ExtResource("1_hmgv8")
 
@@ -32,7 +45,6 @@ transform = Transform3D(1, 0, 0, 0, -0.95744, 0.288631, 0, -0.288631, -0.95744, 
 environment = SubResource("Environment_cn3td")
 
 [node name="HTerrain" type="Node3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -50, 0)
 script = ExtResource("1_1ehf7")
 map_scale = Vector3(2, 1, 2)
 centered = true
@@ -51,3 +63,7 @@ shader_params/u_ground_uv_scale = 20
 shader_params/u_depth_blending = false
 shader_params/u_triplanar = false
 shader_params/u_tile_reduction = Vector4(1, 0, 0, 0)
+
+[node name="Water" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.104, 45, -6.08)
+mesh = SubResource("PlaneMesh_ghp7s")
