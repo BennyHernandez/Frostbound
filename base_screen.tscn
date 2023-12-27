@@ -1,0 +1,3 @@
+[gd_scene format=3 uid="uid://btsr4ojsd637d"]
+
+[node name="BaseScreen" type="CanvasLayer"]
