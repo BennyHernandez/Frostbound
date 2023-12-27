@@ -1,4 +1,4 @@
-[gd_resource type="ShaderMaterial" load_steps=2 format=3 uid="uid://dfjhi82pp342o"]
+[gd_resource type="ShaderMaterial" load_steps=2 format=3 uid="uid://ym61caaa60aq"]
 
 [ext_resource type="Shader" path="res://addons/zylann.hterrain/tools/texture_editor/display_color.gdshader" id="1"]
 
