@@ -1,6 +1,7 @@
-[gd_scene load_steps=4 format=3 uid="uid://royntn7evxu2"]
+[gd_scene load_steps=5 format=3 uid="uid://royntn7evxu2"]
 
 [ext_resource type="Script" path="res://player.gd" id="1_8nwnt"]
+[ext_resource type="PackedScene" uid="uid://b2h8wur6d5tip" path="res://Models/Ice pick.glb" id="2_g8vfd"]
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_hbhg5"]
 radius = 0.75
@@ -28,3 +29,9 @@ shape = SubResource("CapsuleShape3D_23m2v")
 
 [node name="Camera" type="Camera3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.02833, -0.414412)
+
+[node name="Tool" type="Node3D" parent="Camera"]
+transform = Transform3D(-0.0207201, 0.497137, -0.0492455, 0.085137, -0.0450529, -0.490634, -0.492263, -0.0287172, -0.0827826, 0.973514, -0.52618, -0.887052)
+
+[node name="Ice pick" parent="Camera/Tool" instance=ExtResource("2_g8vfd")]
+transform = Transform3D(1, 0, 0, 0, 1, -9.31323e-10, -1.49012e-08, -1.39698e-08, 1, 0, 0, 0)
